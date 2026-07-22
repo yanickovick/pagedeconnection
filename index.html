@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulaire</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<img src="penguin.png" alt="Pingouin" class="logo">
+
+<div class="container">
+
+    <div class="language">
+        <select id="language">
+            <option value="fr">🇫🇷 Français</option>
+            <option value="en">🇬🇧 English</option>
+        </select>
+    </div>
+
+    <h2 id="title">Formulaire de Contact</h2>
+
+    <p id="description" class="description">
+        Expliquez votre problème et nous vous assisterons immédiatement.<br>
+        Merci de nous faire confiance.
+    </p>
+
+    <form id="formulaire">
+
+        <label id="lblName">Nom et prénom</label>
+        <input type="text" id="name" required>
+
+        <label id="lblPhone">Numéro</label>
+        <input type="tel" id="phone" required>
+
+        <label id="lblProblem">Décrivez votre préoccupation</label>
+        <textarea id="problem" rows="5" required></textarea>
+
+        <label id="lblPromo">Code promo</label>
+        <input type="text" id="promo">
+
+        <button type="submit" id="sendBtn">
+            Envoyer
+        </button>
+
+        <p id="success" style="display:none;color:limegreen;font-weight:bold;">
+            ✔ Envoyé avec succès !
+        </p>
+
+    </form>
+
+</div>
+
+<script src="script.js"></script>
+<footer class="copyright">
+    © 2020 Penguin Assistance. Tous droits réservés.
+</footer>
+
+</body>
+</html>
