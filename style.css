@@ -6,91 +6,174 @@
 }
 
 body{
-    background-image: url("fond.jpg");
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-attachment: fixed;
+    background-image:url("fond.jpg");
+    background-size:cover;
+    background-position:center;
+    background-repeat:no-repeat;
+    background-attachment:fixed;
 
-    margin:0;
     min-height:100vh;
     display:flex;
-    flex-direction:column;
-    align-items:center;
+    justify-content:center;
+    align-items:flex-start;
 }
 
-
-.container{
-    margin-top:80px;
-    margin-bottom:80px;
-}
+/* Logo */
 .logo{
     position:fixed;
     top:20px;
     left:20px;
     width:90px;
     height:auto;
+    z-index:1000;
 }
+
+/* Formulaire */
+.container{
+    width:95%;
+    max-width:500px;
+    margin:120px auto 60px;
+    padding:25px;
+    background:rgba(255,255,255,0.15);
+    backdrop-filter:blur(8px);
+    border-radius:20px;
+    box-shadow:0 10px 25px rgba(0,0,0,.25);
+}
+
 h2{
     text-align:center;
-    color:black;
-    margin-top:15px;
-    margin-bottom:40px;
+    color:#000;
+    margin-bottom:20px;
+    font-size:36px;
 }
+
+.description{
+    text-align:center;
+    margin-bottom:25px;
+    font-size:18px;
+    color:#000;
+}
+
+.language{
+    text-align:right;
+    margin-bottom:20px;
+}
+
+.language select{
+    padding:8px;
+    border-radius:8px;
+    border:none;
+}
+
 label{
-
     display:block;
-    margin-top:15px;
-    margin-bottom:5px;
+    margin-top:18px;
+    margin-bottom:8px;
     font-weight:bold;
-
+    color:#000;
+    font-size:18px;
 }
 
 input,
 textarea{
     width:100%;
-    padding:12px;
+    padding:14px;
     border:2px solid #87CEEB;
     border-radius:10px;
-    font-size:16px;
-    background-color:#DFF6FF;   /* Bleu clair */
+    font-size:17px;
+    background:#DFF6FF;
     color:#000;
     outline:none;
     transition:0.3s;
 }
+
 input:focus,
 textarea:focus{
-    background-color:#CDEFFF;
+    background:#CDEFFF;
     border-color:#1E90FF;
-    box-shadow:0 0 8px rgba(30,144,255,0.4);
+    box-shadow:0 0 10px rgba(30,144,255,.5);
 }
-button{
 
+textarea{
+    resize:vertical;
+    min-height:150px;
+}
+
+button{
     width:100%;
     margin-top:25px;
     padding:15px;
     border:none;
-    border-radius:8px;
+    border-radius:10px;
     background:#007BFF;
     color:white;
-    font-size:18px;
+    font-size:20px;
     cursor:pointer;
     transition:.3s;
-
 }
 
 button:hover{
-
     background:#005ec4;
-
 }
 
 #success{
-
-    color:green;
+    display:none;
+    color:limegreen;
     text-align:center;
     font-weight:bold;
     margin-top:20px;
-    display:none;
+    font-size:18px;
+}
+
+.copyright{
+    text-align:center;
+    color:white;
+    padding:25px;
+    font-size:14px;
+}
+
+/* ========================= */
+/* Version téléphone         */
+/* ========================= */
+
+@media (max-width:768px){
+
+    body{
+        padding:10px;
+    }
+
+    .logo{
+        position:relative;
+        display:block;
+        margin:20px auto;
+        top:0;
+        left:0;
+        width:80px;
+    }
+
+    .container{
+        width:100%;
+        margin:10px auto 40px;
+        padding:20px;
+        background:rgba(255,255,255,0.20);
+    }
+
+    h2{
+        font-size:26px;
+    }
+
+    .description{
+        font-size:17px;
+    }
+
+    label{
+        font-size:18px;
+    }
+
+    input,
+    textarea,
+    button{
+        font-size:17px;
+    }
 
 }
